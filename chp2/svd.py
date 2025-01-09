@@ -1,5 +1,5 @@
 # Defined in Section 2.1.2
-
+import matplotlib.pyplot as plt
 import numpy as np
 
 M = np.array([[0, 2, 1, 1, 1, 1, 1, 2, 1, 3],
@@ -34,15 +34,20 @@ print(M_pmi)
 
 U, s, Vh = np.linalg.svd(M_pmi)
 
-import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 
 words = ["我", "喜欢", "自然", "语言", "处理", "爱", "深度", "学习", "机器", "。"]
 
 for i in range(len(words)):
     plt.text(U[i, 0], U[i, 1], words[i])
-plt.xlim(0, 0.6)
-plt.ylim(-0.5, 0.6)
-plt.savefig('svd.pdf')
-plt.show()
+    plt.scatter(U[i, 0], U[i, 1], c='red', s=50)
 
+plt.title('词向量分布图')
+plt.xlabel('第一维度')
+plt.ylabel('第二维度')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.margins(0.1)
+output_file = 'svd.pdf'
+plt.savefig(output_file, bbox_inches='tight', dpi=300)
+print(f"图形已保存至 {output_file}")
+plt.show()
