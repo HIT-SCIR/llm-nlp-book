@@ -1,4 +1,4 @@
-# Defined in Section 4.6.4 and 4.6.5
+# Defined in Section 4.6.1
 
 import torch
 from torch import nn, optim

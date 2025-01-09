@@ -1,4 +1,4 @@
-# Defined in Section 4.6.4
+# Defined in Section 4.6.1
 
 import torch
 from vocab import Vocab
