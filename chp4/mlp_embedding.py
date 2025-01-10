@@ -1,3 +1,5 @@
+# Defined in Section 4.6.1
+
 import torch
 from torch import nn
 from torch.nn import functional as F

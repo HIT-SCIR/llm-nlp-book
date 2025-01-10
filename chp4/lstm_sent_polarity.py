@@ -1,4 +1,4 @@
-# Defined in Section 4.6.7
+# Defined in Section 4.6.1
 
 import torch
 from torch import nn, optim
@@ -69,7 +69,8 @@ model.train()
 for epoch in range(num_epoch):
     total_loss = 0
     for batch in tqdm(train_data_loader, desc=f"Training Epoch {epoch}"):
-        inputs, lengths, targets = [x.to(device) for x in batch]
+        inputs, lengths, targets = [x for x in batch]
+        inputs, targets = inputs.to(device), targets.to(device)
         log_probs = model(inputs, lengths)
         loss = nll_loss(log_probs, targets)
         optimizer.zero_grad()
@@ -81,7 +82,8 @@ for epoch in range(num_epoch):
 #测试过程
 acc = 0
 for batch in tqdm(test_data_loader, desc=f"Testing"):
-    inputs, lengths, targets = [x.to(device) for x in batch]
+    inputs, lengths, targets = [x for x in batch]
+    inputs, targets = inputs.to(device), targets.to(device)
     with torch.no_grad():
         output = model(inputs, lengths)
         acc += (output.argmax(dim=1) == targets).sum().item()

@@ -1,4 +1,4 @@
-# Defined in Section 4.7.3
+# Defined in Section 4.6.2
 
 import math
 import torch
