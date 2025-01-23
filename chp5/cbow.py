@@ -20,9 +20,9 @@ class CbowDataset(Dataset):
             if len(sentence) < context_size * 2 + 1:
                 continue
             for i in range(context_size, len(sentence) - context_size):
-                # 模型输入：左右分别取context_size长度的上下文
+                # 模型输入的左右两个分别取context_size长度的上下文
                 context = sentence[i-context_size:i] + sentence[i+1:i+context_size+1]
-                # 模型输出：当前词
+                # 模型输出为当前词
                 target = sentence[i]
                 self.data.append((context, target))
 

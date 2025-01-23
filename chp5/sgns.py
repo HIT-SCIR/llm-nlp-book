@@ -83,7 +83,7 @@ embedding_dim = 64
 context_size = 2
 hidden_dim = 128
 batch_size = 1024
-num_epoch = 10
+num_epoch = 5
 n_negatives = 10
 
 # 读取文本数据

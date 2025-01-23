@@ -37,6 +37,7 @@ def save_pretrained(vocab, embeds, save_path):
 def load_pretrained(load_path):
     with open(load_path, "r") as fin:
         # Optional: depending on the specific format of pretrained vector file
+        #取决于预训练向量文件的具体格式
         n, d = map(int, fin.readline().split())
         tokens = []
         embeds = []
