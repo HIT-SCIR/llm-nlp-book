@@ -63,8 +63,8 @@ class FeedForwardNNLM(nn.Module):
 embedding_dim = 64
 context_size = 2
 hidden_dim = 128
-batch_size = 1024
-num_epoch = 10
+batch_size = 512
+num_epoch = 5
 
 # 读取文本数据，构建FFNNLM训练数据集（n-grams）
 corpus, vocab = load_reuters()
@@ -73,7 +73,7 @@ data_loader = get_loader(dataset, batch_size)
 
 # 负对数似然损失函数
 nll_loss = nn.NLLLoss()
-# 构建FFNNLM，并加载至device
+# 构建FFNNLM，并加载至device（GPU）
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = FeedForwardNNLM(len(vocab), embedding_dim, context_size, hidden_dim)
 model.to(device)
