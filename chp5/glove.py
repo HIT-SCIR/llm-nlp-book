@@ -64,8 +64,8 @@ class GloveModel(nn.Module):
 
 embedding_dim = 64
 context_size = 2
-batch_size = 1024
-num_epoch = 10
+batch_size = 512
+num_epoch = 5
 
 # 用以控制样本权重的超参数
 m_max = 100

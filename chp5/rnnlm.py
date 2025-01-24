@@ -59,8 +59,8 @@ class RNNLM(nn.Module):
 embedding_dim = 64
 context_size = 2
 hidden_dim = 128
-batch_size = 1024
-num_epoch = 10
+batch_size = 512
+num_epoch = 5
 
 # 读取文本数据，构建FFNNLM训练数据集（n-grams）
 corpus, vocab = load_reuters()
