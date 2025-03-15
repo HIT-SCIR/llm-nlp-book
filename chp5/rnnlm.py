@@ -1,4 +1,4 @@
-# Defined in Section 5.1.3.3
+# Defined in Section 5.4.3
 
 import torch
 import torch.nn as nn

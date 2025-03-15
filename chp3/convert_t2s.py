@@ -1,4 +1,4 @@
-# Defined in Section 3.4.3
+# Defined in Section 3.5.3
 
 import sys
 import opencc

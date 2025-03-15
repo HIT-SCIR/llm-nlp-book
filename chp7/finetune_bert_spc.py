@@ -1,4 +1,4 @@
-# Defined in Section 7.4.3.2
+# Defined in Section 7.5.2
 
 import numpy as np
 from datasets import load_dataset, load_metric
