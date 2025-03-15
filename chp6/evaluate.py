@@ -1,4 +1,4 @@
-# Defined in Section 5.4.1 and 5.4.2
+# Defined in Section 6.1.6
 
 import torch
 from utils import load_pretrained
