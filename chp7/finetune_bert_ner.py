@@ -1,5 +1,3 @@
-# Defined in Section 7.5.4
-
 import numpy as np
 from datasets import load_dataset, load_metric
 from transformers import BertTokenizerFast, BertForTokenClassification, TrainingArguments, Trainer, DataCollatorForTokenClassification
